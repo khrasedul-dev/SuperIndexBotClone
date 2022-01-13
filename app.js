@@ -508,74 +508,22 @@ bot.action('gcCN',ctx=>{
 
 bot.action(['add','rules'],ctx=>{
     ctx.reply(`
-    Rules:
-    1. Type can be bot/channel/group
-    2. See tags list 
-    3. Its must be:  <> URL<> tags <>type
-    4. URL must be start with http:// or https://
-    5.
-    example: https://t*me/bitshibatoken crypto bot
-    example: https://t*me/trendstickers sticker channel
-    example: https://t*me/englishchattinggpp chat group
+    Adding Rules:
+    1. You can add bot/channel/group
+    2. Add type: <> URL <> tags <> type
+    3. Ex: https://t,me/bitshibatoken crypto bot
 
-    Example links start should be replace by dot
-
-    6. Tags to index: 
-    chain
-    game
-    meme
-    metaverse
-    defi
-    exchange
-    dex
-    comprehensive
-    chart
-    financial
-    otc
-    nft
-    technology
-    gambling
-    pay
-    shop
-    other
-    
     `)
 })
 
 
 bot.action('rulesCN',ctx=>{
     ctx.reply(`
-    规则:
-    1.类型可以是 机器人/频道/组
-    2. 查看标签列表
-    3. 它必须是:  <> URL<> 标签 <> 类型
-    4. URL 必须以 http:// or https://
-    5.
-    例子: https://t*me/bitshibatoken 加密货币 机器人
-    例子: https://t*me/trendstickers 贴纸 渠道
-    例子: https://t*me/englishchattinggpp 聊天 团体
+    添加规则：
+     1.您可以添加机器人/频道/组
+     2.添加类型：<> URL <>标签<>类型
+     3. 例如：https://t,me/bitshibatoken 加密 机器人
 
-    示例链接星号应替换为点
-
-    6. 要索引的标签: 
-    链
-    游戏
-    模因
-    元节
-    定义
-    交换
-    索引
-    综合的
-    图表
-    金融
-    场外交易
-    nftcn
-    技术
-    赌博
-    支付
-    店铺
-    其他
-    
     `)
 })
 
