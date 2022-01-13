@@ -460,8 +460,8 @@ bot.hears('❓ Help',ctx=>{
     {
         reply_markup:{
             inline_keyboard:[
-                [{text: "Group Setting",callback_data: "gc"}],
-                [{text: "How to add ?",callback_data: "rules"}],
+                [{text: "Group/Channel Setting",callback_data: "gc"}],
+                [{text: "How to add a group/channel/bot ?",callback_data: "rules"}],
                 [{text: "Go back",callback_data: "home"}]
             ]
         }
@@ -476,8 +476,8 @@ bot.hears('❓ 帮助',ctx=>{
     {
         reply_markup:{
             inline_keyboard:[
-                [{text: "分组设置",callback_data: "gcCN"}],
-                [{text: "如何添加？",callback_data: "rulesCN"}],
+                [{text: "组/频道设置",callback_data: "gcCN"}],
+                [{text: "如何添加群组/频道/机器人？",callback_data: "rulesCN"}],
                 [{text: "回去",callback_data: "回去"}]
             ]
         }
@@ -486,7 +486,7 @@ bot.hears('❓ 帮助',ctx=>{
 
 })
 
-bot.command('gc',ctx=>{
+bot.action('gc',ctx=>{
     ctx.reply(`
     The bot needs to admin permission
 
@@ -496,18 +496,17 @@ bot.command('gc',ctx=>{
     `)
 })
 
-bot.command('gcCN',ctx=>{
+bot.action('gcCN',ctx=>{
     ctx.reply(`
     机器人需要管理员权限
 
     1.更改标题：setCnT 你的题目
-
     2.更改描述：setCnD 你的描述
 
     `)
 })
 
-bot.command(['add','rules'],ctx=>{
+bot.action(['add','rules'],ctx=>{
     ctx.reply(`
     Rules:
     1. Type can be bot/channel/group
@@ -544,7 +543,7 @@ bot.command(['add','rules'],ctx=>{
 })
 
 
-bot.command('rulesCN',ctx=>{
+bot.action('rulesCN',ctx=>{
     ctx.reply(`
     规则:
     1.类型可以是 机器人/频道/组
