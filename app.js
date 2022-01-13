@@ -454,25 +454,36 @@ bot.action('我的链接',ctx=>{
 
 
 bot.hears('❓ Help',ctx=>{
-    ctx.reply(`
-
+    ctx.telegram.sendMessage(ctx.chat.id, `
     ✋ Hello ${ctx.from.first_name} ${ctx.from.last_name || "."}
-    Welcome to use @${ctx.botInfo.username}
-
-    /start - start
-    /gc - for group or channel setting
-    /home - Go to Home
-    /rules - Add link to index `)
+    Welcome to use @${ctx.botInfo.username}`,
+    {
+        reply_markup:{
+            inline_keyboard:[
+                [{text: "Group Setting",callback_data: "gc"}],
+                [{text: "How to add ?",callback_data: "rules"}],
+                [{text: "Go back",callback_data: "home"}]
+            ]
+        }
+    })
 })
 
 bot.hears('❓ 帮助',ctx=>{
-    ctx.reply(`
 
+    ctx.telegram.sendMessage(ctx.chat.id, `
     ✋ 你好 ${ctx.from.first_name} ${ctx.from.last_name || "."}
-    欢迎使用 @${ctx.botInfo.username}
+    欢迎使用 @${ctx.botInfo.username}`,
+    {
+        reply_markup:{
+            inline_keyboard:[
+                [{text: "分组设置",callback_data: "gcCN"}],
+                [{text: "如何添加？",callback_data: "rulesCN"}],
+                [{text: "回去",callback_data: "回去"}]
+            ]
+        }
+    })
 
-    /gcCN - 用于群组或频道设置
-    /rulesCN - 添加链接到索引 `)
+
 })
 
 bot.command('gc',ctx=>{
@@ -480,10 +491,7 @@ bot.command('gc',ctx=>{
     The bot needs to admin permission
 
     1. To change title : setT yourtitle
-    ex: setT mytitle
-
     2. To change description : setD yourdescription
-    ex: setD this is demo description
 
     `)
 })
