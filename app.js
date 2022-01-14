@@ -126,7 +126,7 @@ bot.hears('⚑ Language : Chinese',ctx=>{
 
 
 
-bot.hears("👥 My Account",ctx=>{
+bot.hears(["👥 My Account","/myaccount"],ctx=>{
     ctx.telegram.sendMessage(ctx.chat.id, "👋 Wellcome "+ctx.from.first_name +"\n\n"+"UID: "+ctx.from.id, {
         reply_markup: {
             inline_keyboard: [
@@ -453,7 +453,7 @@ bot.action('我的链接',ctx=>{
 
 
 
-bot.hears('❓ Help',ctx=>{
+bot.hears(['❓ Help','/help'],ctx=>{
     ctx.telegram.sendMessage(ctx.chat.id, `
     ✋ Hello ${ctx.from.first_name} ${ctx.from.last_name || "."}
     Welcome to use @${ctx.botInfo.username}`,
@@ -528,7 +528,7 @@ bot.action('rulesCN',ctx=>{
 })
 
 
-bot.hears('🔊 Channels',ctx=>{
+bot.hears(['🔊 Channels','/channel'],ctx=>{
 
     const searchQuery = {
         type: "channel"
@@ -782,7 +782,7 @@ bot.hears('🔊 频道',ctx=>{
 
 })
 
-bot.hears('⛺ Groups',ctx=>{
+bot.hears(['⛺ Groups','/group'],ctx=>{
 
     const searchQuery = {
         type: "group"
@@ -1029,7 +1029,7 @@ bot.hears('⛺ 群组',ctx=>{
 
 
 
-bot.hears('😼 Bots',ctx=>{
+bot.hears(['😼 Bots','/bot'],ctx=>{
 
     const searchQuery = {
         type: "bot"
@@ -1154,7 +1154,7 @@ bot.hears('😼 Bots',ctx=>{
 
 })
 
-bot.hears('😼 Bots',ctx=>{
+bot.hears('😼 机器人',ctx=>{
 
     const searchQuery = {
         type: "bot"
@@ -1286,7 +1286,7 @@ bot.hears('😼 Bots',ctx=>{
 const tags_array = ['chain','game','Meme','metaverse','defi','exchange','dex','comprehensive','chart','otc','nft','tech','gambling','pay','financial','shop','other']
 
 
-bot.hears('🔰 Tags',ctx=>{
+bot.hears(['🔰 Tags','/tags'],ctx=>{
 
     ctx.telegram.sendMessage(ctx.chat.id, "🔰 Tags List:",{
         reply_markup:{
