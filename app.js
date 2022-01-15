@@ -302,17 +302,39 @@ bot.hears(/t\.me/gi,ctx=>{
                 }
         
                 const postObject = new postModel({...postData})
-        
-                postObject.save((e , data)=>{
-                    if(e){
-                        console.log(e)
-                    }else{
-        
-                        ctx.reply(`${ready_text[2].toUpperCase()} added successfully / ${ready_text[2].toUpperCase()} 添加成功 `).catch((e)=>ctx.reply("Somthing is wrong"))
-        
+
+                const findQuery = {
+                    url : ready_text[0]
+                }
+
+                postModel.find(findQuery , (error , data)=>{
+                    
+                    if (error) {
+
+                        console.log(error)
+
+                    } else {
+
+                        if (data.length > 0) {
+
+                            ctx.reply(` Your ${data[0].type} is already added / 您的 ${data[0].type} 已添加 `)
+
+                        } else {
+
+                            postObject.save((e , data)=>{
+                                if(e){
+                                    console.log(e)
+                                }else{
+                    
+                                    ctx.reply(`${ready_text[2].toUpperCase()} added successfully / ${ready_text[2].toUpperCase()} 添加成功 `).catch((e)=>ctx.reply("Somthing is wrong"))
+                    
+                                }
+                            })
+
+             
+                        }
                     }
                 })
-
                 
 
             }
