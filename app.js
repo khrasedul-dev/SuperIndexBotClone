@@ -1623,7 +1623,10 @@ bot.on('text',ctx=>{
     },
     {
         tags: user_input_tags
-    }]
+    },
+	{
+	type: user_input_tags
+}]
 
     let postion = [];
 
