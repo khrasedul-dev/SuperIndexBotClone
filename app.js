@@ -399,7 +399,7 @@ bot.action('mylinks',ctx=>{
                     }
           
 
-            }).limit(1).sort("-1")  
+            }).limit(1).sort('date',-1)  
 
         }
     })
@@ -461,7 +461,7 @@ bot.action('我的链接',ctx=>{
                     }
           
 
-            }).limit(1).sort("-1")  
+            }).limit(1).sort('date',-1)
 
         }
     })
@@ -608,7 +608,7 @@ bot.hears(['🔊 Channels','/channel'],ctx=>{
 
                 
 
-            }).limit(1).sort("-1")
+            }).limit(1).sort('date',-1)
 
 
         }
@@ -735,7 +735,7 @@ bot.hears('🔊 频道',ctx=>{
 
                 
 
-            }).limit(1).sort("-1")
+            }).limit(1).sort('date',-1)
 
 
         }
@@ -858,7 +858,7 @@ bot.hears(['⛺ Groups','/group'],ctx=>{
                     }
           
 
-            }).limit(1).sort("-1")
+            }).limit(1).sort('date',-1)
 
             
 
@@ -980,7 +980,7 @@ bot.hears('⛺ 群组',ctx=>{
                     }
           
 
-            }).limit(1).sort("-1")
+            }).limit(1).sort('date',-1)
 
             
 
@@ -1108,7 +1108,7 @@ bot.hears(['😼 Bots','/bot'],ctx=>{
 
                 
 
-            }).limit(1).sort("-1")
+            }).limit(1).sort('date',-1)
 
             
 
@@ -1233,7 +1233,7 @@ bot.hears('😼 机器人',ctx=>{
 
                 
 
-            }).limit(1).sort("-1")
+            }).limit(1).sort('date',-1)
 
             
 
@@ -1413,7 +1413,7 @@ bot.action(tags_array,ctx=>{
 
                 
 
-            }).limit(1).sort("-1")
+            }).limit(1).sort('date',-1)
 
             
 
@@ -1541,7 +1541,7 @@ bot.action(tags_array2,ctx=>{
 
                 
 
-            }).limit(1).sort("-1")
+            }).limit(1).sort('date',-1)
 
             
 
@@ -1677,7 +1677,7 @@ bot.on('text',ctx=>{
 
                 
 
-            }).limit(1).sort("-1")
+            }).limit(1).sort('date',-1)
 
             
 
@@ -1797,7 +1797,7 @@ bot.action(num,ctx=>{
 
                 
 
-            }).limit(1).sort("-1")
+            }).limit(1).sort('date',-1)
 
             
 
