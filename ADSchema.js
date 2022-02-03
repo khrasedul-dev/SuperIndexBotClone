@@ -25,7 +25,10 @@ const schema = new mongoose.Schema({
     url: {
         type: String
     },
-    Date: Date
+    date:{
+        type: Date,
+        default: Date.now()
+    }
 })
 
 module.exports = mongoose.model("ad" , schema)
